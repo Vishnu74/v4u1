@@ -373,7 +373,7 @@ const Contact: React.FC = () => {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-8">Our Location</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Based in Bengaluru, serving clients globally with precision steel detailing services
+              Based in Tamilnadu, serving clients globally with precision steel detailing services
             </p>
           </motion.div>
 

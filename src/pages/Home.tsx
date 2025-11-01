@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { SITE_INFO, HERO_CONTENT, ABOUT, SERVICES, FOUNDERS_MESSAGE, DESIGN_PRESETS, SEO_DATA } from '../data/data';
 import { useDesign } from '../contexts/DesignContext';
-import { ArrowRight, Phone, Mail, CheckCircle, Star, Users, Award } from 'lucide-react';
+import { ArrowRight, Phone, Mail, CheckCircle, Star, Users, Award, Linkedin } from 'lucide-react';
 
 const Home: React.FC = () => {
   const { currentDesign } = useDesign();
@@ -23,9 +23,9 @@ const Home: React.FC = () => {
         title={SEO_DATA.pages.home.title}
         description={SEO_DATA.pages.home.description}
       />
-      
+
       {/* Hero Section */}
-      <section 
+      <section
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${currentDesignData.heroImage})`,
@@ -35,7 +35,7 @@ const Home: React.FC = () => {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/40"></div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ const Home: React.FC = () => {
             <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
               {HERO_CONTENT.description}
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
@@ -70,7 +70,7 @@ const Home: React.FC = () => {
                 {HERO_CONTENT.ctaSecondary}
               </Link>
             </div>
-            
+
             <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center text-white/80">
               <a href={`tel:${SITE_INFO.phone}`} className="flex items-center space-x-2 hover:text-white transition-colors">
                 <Phone className="h-5 w-5" />
@@ -80,6 +80,12 @@ const Home: React.FC = () => {
                 <Mail className="h-5 w-5" />
                 <span>{SITE_INFO.email}</span>
               </a>
+
+              <a href={SITE_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors">
+                <Linkedin className="h-5 w-5" />
+                <span>V4U Steel Detailing Services</span>
+              </a>
+
             </div>
           </motion.div>
         </div>
@@ -104,7 +110,7 @@ const Home: React.FC = () => {
           </motion.div>
 
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -121,7 +127,7 @@ const Home: React.FC = () => {
                 <div className="text-gray-600">{stat.label}</div>
               </motion.div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
 

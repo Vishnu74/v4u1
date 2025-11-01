@@ -1,5 +1,7 @@
 // Central data store for V4U Steel Detailing Services
 
+import { Linkedin } from "lucide-react";
+
 export interface Project {
   id: string;
   title: string;
@@ -30,17 +32,18 @@ export interface Service {
 }
 
 export const SITE_INFO = {
-  name: 'V4U STEEL DETAILING SERVICES 2025',
+  name: 'V4U STEEL DETAILING SERVICES',
   phone: '+91 8098315403',
+  linkedin: 'https://www.linkedin.com/company/v4u-steel-detailers',
   email: 'v4udetailers@gmail.com',
-  address: 'Bengaluru, Karnataka, India',
+  address: 'Rasipuram, Tamilnadu, India',
   tagline: 'Where Precision Meets Passion',
   shortWelcome: `Hi There! Welcome to V4U Steel Detailing Services – where precision meets passion in every beam and bolt. We are a dedicated team of experienced steel detailers committed to delivering high-quality structural and miscellaneous steel detailing services. With a strong foundation in AISC, CISC and ASI standards and hands-on expertise in Tekla Structures, we help fabricators, engineers, and general contractors bring their visions to life with accuracy and efficiency. Whether you're building bridges, commercial spaces, or custom stair systems – we're here to detail your success.`,
 };
 
 export const HERO_CONTENT = {
-  title: 'Precision Steel Detailing',
-  subtitle: 'Where Every Beam Tells a Story',
+  title: 'V4U STEEL DETAILING SERVICES',
+  subtitle: 'Excellence in Every Detail',
   description: 'Expert steel detailing services with AISC, CISC & ASI compliance using Tekla Structures.',
   ctaText: 'Start Your Project',
   ctaSecondary: 'View Portfolio',
@@ -313,8 +316,8 @@ export const TEAM_STRUCTURE = [
 export const DESIGN_PRESETS = {
   design1: {
     name: 'Corporate Clean',
-    heroImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop',
-    fireMessage: 'Excellence in Every Detail',
+    heroImage: '../../assets/v4uhome.jpeg',
+    fireMessage: 'Engineering the Future',
   },
   design2: {
     name: 'Dark Bold',
@@ -346,7 +349,7 @@ export const CONTACT_INFO = {
   founderName: 'Muralikrishnan S',
   founderTitle: 'Founder & Managing Director, V4U Detailing Services',
   
-  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.56865794367!2d77.46612635!3d12.954517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin',
+  mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125129.20673448914!2d78.12858212842578!3d11.459147009888406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babc20ec06afb6f%3A0x45b97c5f12fb6da9!2sRasipuram%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1761978958278!5m2!1sen!2sin',
 };
 
 export const SEO_DATA = {

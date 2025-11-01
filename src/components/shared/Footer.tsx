@@ -22,10 +22,10 @@ export const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Expert steel detailing services with AISC, CISC & ASI compliance using Tekla Structures. 
+              Expert steel detailing services with AISC, CISC & ASI compliance using Tekla Structures.
               Precision in every beam and bolt.
             </p>
-            
+
             {/* Contact Info */}
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
@@ -38,6 +38,12 @@ export const Footer: React.FC = () => {
                 <Mail className="h-5 w-5 text-brand-400" />
                 <a href={`mailto:${SITE_INFO.email}`} className="text-gray-300 hover:text-white transition-colors">
                   {SITE_INFO.email}
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Linkedin className="h-5 w-5 text-brand-400" />
+                <a href={SITE_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                  V4U Steel Detailing Services
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -76,10 +82,10 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li className="text-gray-300">Structural Steel Detailing</li>
               <li className="text-gray-300">Metalwork Detailing</li>
-              <li className="text-gray-300">Connection Design</li>
+              <li className="text-gray-300">Steel Connection Design</li>
               <li className="text-gray-300">Material Take-Off</li>
               <li className="text-gray-300">Point Cloud to BIM</li>
-              <li className="text-gray-300">Shop Drawings</li>
+              {/* <li className="text-gray-300">Shop Drawings</li> */}
             </ul>
           </div>
         </div>
@@ -90,17 +96,17 @@ export const Footer: React.FC = () => {
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © {currentYear} {SITE_INFO.name}. All rights reserved.
             </div>
-            
+
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <a href={SITE_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              {/* <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </a> */}
+              {/* <a href="#" className="text-gray-400 hover:text-white transition-colors">
                 <Facebook className="h-5 w-5" />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

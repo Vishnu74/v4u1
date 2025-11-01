@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { SEOHead } from '../components/SEOHead';
 import { SERVICES, INDUSTRIES, SEO_DATA } from '../data/data';
 import { X, ArrowRight, CheckCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Services: React.FC = () => {
   const [selectedService, setSelectedService] = useState<string | null>(null);
@@ -71,10 +72,10 @@ const Services: React.FC = () => {
                 <div className="bg-brand-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 transition-colors duration-300">
                   <CheckCircle className="h-8 w-8 text-brand-600 group-hover:text-white transition-colors duration-300" />
                 </div>
-                
+
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                
+
                 <div className="mb-6">
                   <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
@@ -86,7 +87,7 @@ const Services: React.FC = () => {
                     ))}
                   </ul>
                 </div>
-                
+
                 <button className="text-brand-600 hover:text-brand-700 font-semibold flex items-center space-x-2 transition-colors duration-300">
                   <span>Learn More</span>
                   <ArrowRight className="h-4 w-4" />
@@ -144,10 +145,18 @@ const Services: React.FC = () => {
             <p className="text-xl text-brand-100 mb-8 max-w-2xl mx-auto">
               Let's discuss your steel detailing requirements and how we can help deliver your project with precision.
             </p>
-            <button className="bg-white text-brand-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center space-x-2">
+            {/* <button className="bg-white text-brand-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center space-x-2">
               <span>Contact Us Today</span>
               <ArrowRight className="h-5 w-5" />
-            </button>
+            </button> */}
+            <Link
+              to="/contact"
+              className="bg-white text-brand-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center space-x-2"
+              // className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center space-x-2 shadow-xl hover:shadow-2xl hover:scale-105"
+            >
+              <span>Contact Us Today</span>
+              <ArrowRight className="h-5 w-5" />
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -201,19 +210,19 @@ const Services: React.FC = () => {
                   <div className="bg-brand-50 p-6 rounded-lg">
                     <h4 className="text-lg font-semibold text-brand-800 mb-3">Why Choose V4U for This Service?</h4>
                     <p className="text-brand-700">
-                      Our team combines years of experience with cutting-edge technology to deliver 
+                      Our team combines years of experience with cutting-edge technology to deliver
                       precise, fabrication-ready drawings that meet international standards and exceed client expectations.
                     </p>
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button 
+                    <button
                       onClick={closeServiceModal}
                       className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex-1"
                     >
                       Get Quote for This Service
                     </button>
-                    <button 
+                    <button
                       onClick={closeServiceModal}
                       className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
                     >

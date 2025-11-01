@@ -33,12 +33,29 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="bg-brand-600 p-2 rounded-lg">
+            {/* <div className="bg-brand-600 p-2 rounded-lg">
               <Building2 className="h-6 w-6 text-white" />
+            </div> */}
+
+            <div className="px-2 rounded-lg"
+            >
+              <img
+                src="../../../assets/v4ulogo1.jpeg" 
+                alt="V4U Logo"
+                className="h-14 w-14 object-contain"
+              />
             </div>
+
+            {/* <div className="hidden sm:block font-bold text-xl text-gray-900">
+              {SITE_INFO.name.split(' ')[0]}
+            </div> */}
+
+
+
+
             <div>
               <div className="text-lg font-bold text-gray-900">{SITE_INFO.name.split(' ')[0]}</div>
-              <div className="text-xs text-gray-600">Steel Detailing</div>
+              <div className="text-xs text-gray-600">Steel Detailing Services</div>
             </div>
           </Link>
 
@@ -48,11 +65,10 @@ export const Navbar: React.FC = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  location.pathname === item.href
+                className={`px-3 py-2 text-sm font-medium transition-colors ${location.pathname === item.href
                     ? 'text-brand-600 border-b-2 border-brand-600'
                     : 'text-gray-700 hover:text-brand-600'
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -77,11 +93,10 @@ export const Navbar: React.FC = () => {
                         setCurrentDesign(option.value);
                         setDesignDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-2 text-sm transition-colors ${
-                        currentDesign === option.value
+                      className={`w-full text-left px-4 py-2 text-sm transition-colors ${currentDesign === option.value
                           ? 'bg-brand-50 text-brand-600'
                           : 'text-gray-700 hover:bg-gray-50'
-                      }`}
+                        }`}
                     >
                       {option.label}
                     </button>
@@ -115,11 +130,10 @@ export const Navbar: React.FC = () => {
                 key={item.name}
                 to={item.href}
                 onClick={() => setIsOpen(false)}
-                className={`block px-4 py-2 text-sm font-medium transition-colors ${
-                  location.pathname === item.href
+                className={`block px-4 py-2 text-sm font-medium transition-colors ${location.pathname === item.href
                     ? 'text-brand-600 bg-brand-50'
                     : 'text-gray-700 hover:text-brand-600 hover:bg-gray-50'
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
@@ -135,11 +149,10 @@ export const Navbar: React.FC = () => {
                     setCurrentDesign(option.value);
                     setIsOpen(false);
                   }}
-                  className={`block w-full text-left px-2 py-1 text-sm transition-colors rounded ${
-                    currentDesign === option.value
+                  className={`block w-full text-left px-2 py-1 text-sm transition-colors rounded ${currentDesign === option.value
                       ? 'bg-brand-100 text-brand-600'
                       : 'text-gray-600 hover:bg-gray-100'
-                  }`}
+                    }`}
                 >
                   {option.label}
                 </button>
