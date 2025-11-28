@@ -29,6 +29,7 @@ export interface Service {
   description: string;
   features: string[];
   icon: string;
+  imagePath: string;
 }
 
 export const SITE_INFO = {
@@ -112,6 +113,7 @@ export const SERVICES: Service[] = [
     description: 'Comprehensive structural steel detailing with full AISC/CISC/ASI compliance for beams, columns, braces, anchor plans, frames, and base plates.',
     features: ['AISC/CISC/ASI Standards', 'Connection Design', 'Fabrication Drawings', 'Erection Plans'],
     icon: 'Building2',
+    imagePath: '/assets/service/structural-steel.jpg',
   },
   {
     id: 'metalwork',
@@ -119,6 +121,7 @@ export const SERVICES: Service[] = [
     description: 'Specialized detailing for stairs, handrails, ramps, guards, balustrades, grating, and miscellaneous architectural steel elements.',
     features: ['Stair Systems', 'Handrails & Guards', 'Architectural Steel', 'Custom Fabrication'],
     icon: 'Stairs',
+    imagePath: '/assets/service/metalwork.jpg',
   },
   {
     id: 'connections',
@@ -126,6 +129,7 @@ export const SERVICES: Service[] = [
     description: 'Expert connection design following AISC/CISC standards including end plate, base plate, clip angle, gusset, and splice connections.',
     features: ['End Plate Connections', 'Base Plate Design', 'Moment Connections', 'Splice Details'],
     icon: 'Link',
+    imagePath: '/assets/service/connections.jpg',
   },
   {
     id: 'estimation',
@@ -133,6 +137,7 @@ export const SERVICES: Service[] = [
     description: 'Accurate BOQ generation and preliminary quantity estimates to support project planning and budgeting.',
     features: ['Quantity Takeoffs', 'Material Lists', 'Cost Estimation', 'BOM Generation'],
     icon: 'Calculator',
+    imagePath: '/assets/service/estimation.jpg',
   },
   {
     id: 'pointcloud',
@@ -140,6 +145,7 @@ export const SERVICES: Service[] = [
     description: 'Convert 3D scan data into accurate BIM models for renovation and retrofit projects.',
     features: ['Scan to Model', 'As-Built Modeling', 'Clash Detection', 'Reality Capture'],
     icon: 'Scan',
+    imagePath: '/assets/service/pointcloud.jpg',
   },
   {
     id: 'shopdraws',
@@ -147,6 +153,7 @@ export const SERVICES: Service[] = [
     description: 'Complete shop drawing packages with CNC-ready files including DXF, NC1, and BOM exports.',
     features: ['Shop Drawings', 'CNC Files', 'DXF/NC1 Export', 'Fabrication Ready'],
     icon: 'FileText',
+    imagePath: '/assets/service/shop-drawings.jpg',
   },
 ];
 

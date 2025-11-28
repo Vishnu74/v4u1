@@ -1,13 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
+import { ServiceCard } from '../components/ServiceCard';
 import { SITE_INFO, HERO_CONTENT, ABOUT, SERVICES, FOUNDERS_MESSAGE, DESIGN_PRESETS, SEO_DATA } from '../data/data';
 import { useDesign } from '../contexts/DesignContext';
 import { ArrowRight, Phone, Mail, CheckCircle, Star, Users, Award, Linkedin } from 'lucide-react';
 
 const Home: React.FC = () => {
   const { currentDesign } = useDesign();
+  const navigate = useNavigate();
   const currentDesignData = DESIGN_PRESETS[currentDesign as keyof typeof DESIGN_PRESETS];
 
   const stats = [
@@ -16,6 +18,10 @@ const Home: React.FC = () => {
     { icon: CheckCircle, label: 'Happy Clients', value: '50+' },
     { icon: Star, label: 'Quality Rating', value: '5.0' },
   ];
+
+  const handleServiceClick = () => {
+    navigate('/services');
+  };
 
   return (
     <>
@@ -186,31 +192,16 @@ const Home: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.slice(0, 6).map((service, index) => (
-              <motion.div
+              <ServiceCard
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-brand-200 group"
-              >
-                <div className="bg-brand-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6 group-hover:bg-brand-600 transition-colors duration-300">
-                  <div className="h-6 w-6 text-brand-600 group-hover:text-white transition-colors duration-300">
-                    {/* Icon placeholder - you can add actual icons */}
-                    <CheckCircle className="h-6 w-6" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature) => (
-                    <li key={feature} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="h-4 w-4 text-brand-500 mr-2 flex-shrink-0" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+                id={service.id}
+                title={service.title}
+                description={service.description}
+                features={service.features}
+                imagePath={service.imagePath}
+                index={index}
+                onClick={handleServiceClick}
+              />
             ))}
           </div>
 

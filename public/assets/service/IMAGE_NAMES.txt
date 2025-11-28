@@ -1,0 +1,20 @@
+SERVICE IMAGES - Required Filenames
+=====================================
+
+Place your service images in this directory with these exact filenames:
+
+1. structural-steel.jpg      → Structural Steel Detailing
+2. metalwork.jpg             → Metalwork Detailing
+3. connections.jpg           → Connection Design
+4. estimation.jpg            → Material Take-Off & Estimation
+5. pointcloud.jpg            → Point Cloud to BIM Conversion
+6. shop-drawings.jpg         → Shop Drawing & CNC File Generation
+
+Image Specs:
+- Format: JPG or PNG
+- Recommended size: 1200px - 1600px width
+- Aspect ratio: 16:9 or 4:3
+- File size: Under 500KB (optimized)
+
+These images will be displayed prominently on the Service Cards
+with hover effects, gradient overlays, and premium styling.

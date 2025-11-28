@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SEOHead } from '../components/SEOHead';
+import { ServiceCard } from '../components/ServiceCard';
 import { SERVICES, INDUSTRIES, SEO_DATA } from '../data/data';
 import { X, ArrowRight, CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -60,39 +61,16 @@ const Services: React.FC = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SERVICES.map((service, index) => (
-              <motion.div
+              <ServiceCard
                 key={service.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-brand-200 group cursor-pointer"
+                id={service.id}
+                title={service.title}
+                description={service.description}
+                features={service.features}
+                imagePath={service.imagePath}
+                index={index}
                 onClick={() => openServiceModal(service.id)}
-              >
-                <div className="bg-brand-100 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:bg-brand-600 transition-colors duration-300">
-                  <CheckCircle className="h-8 w-8 text-brand-600 group-hover:text-white transition-colors duration-300" />
-                </div>
-
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-900 mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 3).map((feature) => (
-                      <li key={feature} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="h-4 w-4 text-brand-500 mr-2 flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <button className="text-brand-600 hover:text-brand-700 font-semibold flex items-center space-x-2 transition-colors duration-300">
-                  <span>Learn More</span>
-                  <ArrowRight className="h-4 w-4" />
-                </button>
-              </motion.div>
+              />
             ))}
           </div>
         </div>
