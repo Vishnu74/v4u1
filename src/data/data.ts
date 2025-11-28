@@ -334,7 +334,7 @@ export const TEAM_STRUCTURE = [
 export const DESIGN_PRESETS = {
   design1: {
     name: 'Corporate Clean',
-    heroImage: '../../public/assets/v4uhome.jpeg',
+    heroImage: '/assets/v4uhome.jpeg',
     fireMessage: 'Engineering the Future',
   },
   design2: {
