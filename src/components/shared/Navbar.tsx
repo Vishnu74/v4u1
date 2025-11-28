@@ -40,7 +40,7 @@ export const Navbar: React.FC = () => {
             <div className="px-2 rounded-lg"
             >
               <img
-                src="../../../public/assets/v4ulogo1.jpeg" 
+                src="/assets/v4ulogo1.jpeg" 
                 alt="V4U Logo"
                 className="h-14 w-14 object-contain"
               />
