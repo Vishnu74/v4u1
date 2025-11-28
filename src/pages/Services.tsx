@@ -100,10 +100,26 @@ const Services: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group cursor-pointer"
               >
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">{industry.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{industry.description}</p>
+                <div className="relative h-48 overflow-hidden">
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent z-10"></div>
+                  <img
+                    src={industry.imagePath}
+                    alt={industry.title}
+                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700 ease-out"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop';
+                    }}
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
+                    <h3 className="text-xl font-bold text-white mb-1">{industry.title}</h3>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <p className="text-gray-600 leading-relaxed">{industry.description}</p>
+                </div>
               </motion.div>
             ))}
           </div>
