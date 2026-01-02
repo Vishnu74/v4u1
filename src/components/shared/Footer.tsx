@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { SITE_INFO } from '../../data/data';
-import { Building2, Phone, Mail, MapPin, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { SITE_INFO, SERVICES } from '../../data/data';
+import { Phone, Mail, MapPin, Linkedin } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -13,8 +13,12 @@ export const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="col-span-1 lg:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="bg-brand-600 p-2 rounded-lg">
-                <Building2 className="h-6 w-6 text-white" />
+              <div className="bg-white p-1 rounded-lg">
+                <img
+                  src="/assets/UpdatedLogo/v4ulogo.png"
+                  alt="V4U Logo"
+                  className="h-10 w-10 object-contain"
+                />
               </div>
               <div>
                 <div className="text-xl font-bold">{SITE_INFO.name}</div>
@@ -22,7 +26,7 @@ export const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Expert steel detailing services with AISC, CISC & ASI compliance using Tekla Structures.
+              Expert steel detailing services with AISC, CISC, ASI, BS & EURO CODE compliance using Tekla Structures.
               Precision in every beam and bolt.
             </p>
 
@@ -80,12 +84,24 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Our Services</h3>
             <ul className="space-y-2">
-              <li className="text-gray-300">Structural Steel Detailing</li>
-              <li className="text-gray-300">Metalwork Detailing</li>
-              <li className="text-gray-300">Steel Connection Design</li>
-              <li className="text-gray-300">Material Take-Off</li>
-              <li className="text-gray-300">Point Cloud to BIM</li>
-              {/* <li className="text-gray-300">Shop Drawings</li> */}
+              {SERVICES.slice(0, 5).map((service) => (
+                <li key={service.id}>
+                  <Link
+                    to={`/services#${service.id}`}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {service.title}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  to="/services"
+                  className="text-brand-400 hover:text-brand-300 transition-colors text-sm font-medium"
+                >
+                  View All Services →
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

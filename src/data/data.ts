@@ -49,7 +49,7 @@ export const SITE_INFO = {
 };
 
 export const HERO_CONTENT = {
-  title: 'V4U STEEL DETAILING SERVICES',
+  title: 'V4U STEEL DETAILING',
   subtitle: 'Where Precision Meets Passion',
   description: 'Expert steel detailing services with AISC, CISC, ASI, BS & EURO CODE compliance using Tekla Structures.',
   ctaText: 'Start Your Project',
@@ -150,7 +150,7 @@ export const SERVICES: Service[] = [
   },
   {
     id: 'pointcloud',
-    title: 'Point Cloud to BIM Conversion',
+    title: 'Scan To Build',
     description: 'Convert 3D scan data into accurate BIM models for renovation and retrofit projects.',
     features: ['Scan to Model', 'As-Built Modeling', 'Clash Detection', 'Reality Capture'],
     icon: 'Scan',
@@ -196,95 +196,158 @@ export const INDUSTRIES: Industry[] = [
 
 export const PROJECTS: Project[] = [
   {
-    id: 'villa-latella',
+    id: 'compton-mill',
+    title: 'Compton Mill',
+    industry: 'Commercial & Institutional',
+    location: 'Canada',
+    details: 'Our project delivers high-quality miscellaneous steel detailing services, providing accurate drawings and models for stairs, handrails, ladders, and other secondary steel components. Our detailing ensures safety, precision, and long-term durability, while strictly complying with industry standards and project specifications. This project highlights our expertise in miscellaneous steel detailing, coordination, and constructible shop drawings for efficient fabrication and installation.',
+    highlights: [
+      'Complex renovation geometry',
+      'Integration with existing structure',
+      'High-precision connection design',
+      'Architectural exposed steel',
+    ],
+    stats: [
+      { label: 'Steel Weight', value: '120+ tons' },
+      { label: 'Drawings', value: '500+' },
+    ],
+    images: [
+      '/assets/Model snaps/Compton Mill/snap_001.jpg',
+      '/assets/Model snaps/Compton Mill/snap_002.jpg',
+    ],
+  },
+  {
+    id: 'graduation-pavilion',
+    title: 'Graduation Pavilion',
+    industry: 'Commercial & Institutional',
+    location: 'USA',
+    details: 'Our project delivers high-quality miscellaneous steel detailing services, providing accurate drawings and models for stairs, handrails, ladders, and other secondary steel components. Our detailing ensures safety, precision, and long-term durability, while strictly complying with industry standards and project specifications. This project highlights our expertise in miscellaneous steel detailing, coordination, and constructible shop drawings for efficient fabrication and installation.',
+    highlights: [
+      'Architecturally exposed structural steel (AESS)',
+      'Curved geometry detailing',
+      'Custom connection design',
+      'Fast-track delivery',
+    ],
+    stats: [
+      { label: 'Project Area', value: '15,000 sq ft' },
+      { label: 'Completion', value: '3 Weeks' },
+    ],
+    images: [
+      '/assets/Model snaps/Graduation Pavilion/1.jpg',
+      '/assets/Model snaps/Graduation Pavilion/2.jpg',
+      '/assets/Model snaps/Graduation Pavilion/3.jpg',
+      '/assets/Model snaps/Graduation Pavilion/4.jpg',
+    ],
+  },
+  {
+    id: 'janine-sutto',
+    title: 'Janine Sutto',
+    industry: 'Commercial & Institutional',
+    location: 'Montreal, Canada',
+    details: 'Our project delivers high-quality miscellaneous steel detailing services, providing accurate drawings and models for stairs, handrails, ladders, and other secondary steel components. Our detailing ensures safety, precision, and long-term durability, while strictly complying with industry standards and project specifications. This project highlights our expertise in miscellaneous steel detailing, coordination, and constructible shop drawings for efficient fabrication and installation.',
+    highlights: [
+      'Heavy structural framing',
+      'Long-span truss systems',
+      'Cantilever analysis',
+      'Seismic force resistance systems',
+    ],
+    images: [
+      '/assets/Model snaps/Janine Sutto/Image 01.jpg',
+      '/assets/Model snaps/Janine Sutto/snap_003.jpg',
+    ],
+  },
+  {
+    id: 'place-cartier-school',
+    title: 'Place Cartier School',
+    industry: 'Commercial & Institutional',
+    location: 'Canada',
+    details: 'Our project delivers high-quality miscellaneous steel detailing services, providing accurate drawings and models for stairs, handrails, ladders, and other secondary steel components. Our detailing ensures safety, precision, and long-term durability, while strictly complying with industry standards and project specifications. This project highlights our expertise in miscellaneous steel detailing, coordination, and constructible shop drawings for efficient fabrication and installation.',
+    highlights: [
+      'MEP coordination integration',
+      'Safety-critical design',
+      'Modular steel components',
+      'Strict timeline adherence',
+    ],
+    images: [
+      '/assets/Model snaps/Place Cartier School/snap_001.jpg',
+      '/assets/Model snaps/Place Cartier School/snap_002.jpg',
+      '/assets/Model snaps/Place Cartier School/snap_003.jpg',
+      '/assets/Model snaps/Place Cartier School/snap_004.jpg',
+    ],
+  },
+  {
+    id: 'solstice-platform',
+    title: 'Solstice Platform',
+    industry: 'Infrastructure & Transport',
+    location: 'International',
+    details: 'Our project delivers high-quality miscellaneous steel detailing services, providing accurate drawings and models for stairs, handrails, ladders, and other secondary steel components. Our detailing ensures safety, precision, and long-term durability, while strictly complying with industry standards and project specifications. This project highlights our expertise in miscellaneous steel detailing, coordination, and constructible shop drawings for efficient fabrication and installation.',
+    highlights: [
+      'High load capacity design',
+      'Dynamic load analysis',
+      'Corrosion-resistant detailing',
+      'Specialized equipment support',
+    ],
+    images: [
+      '/assets/Model snaps/Solstice Platform/snap_001.jpg',
+      '/assets/Model snaps/Solstice Platform/snap_002.jpg',
+    ],
+  },
+  {
+    id: 'ste-agathe',
+    title: 'Ste-Agathe',
+    industry: 'Residential & Mixed-Use',
+    location: 'Quebec, Canada',
+    details: 'Our project delivers high-quality miscellaneous steel detailing services, providing accurate drawings and models for stairs, handrails, ladders, and other secondary steel components. Our detailing ensures safety, precision, and long-term durability, while strictly complying with industry standards and project specifications. This project highlights our expertise in miscellaneous steel detailing, coordination, and constructible shop drawings for efficient fabrication and installation.',
+    highlights: [
+      'Multi-story load transfer',
+      'Composite beam detailing',
+      'Balcony support systems',
+      'Integrated parking structure',
+    ],
+    images: [
+      '/assets/Model snaps/Ste-Agathe/snap_007.jpg',
+      '/assets/Model snaps/Ste-Agathe/snap_008.jpg',
+    ],
+  },
+  {
+    id: 'villa-latella-phase-29',
     title: 'Villa Latella — Phase 29',
     industry: 'Residential & Mixed-Use',
     location: 'Canada',
-    details: '15-Storey Residential Building',
+    details: 'Our project delivers high-quality miscellaneous steel detailing services, providing accurate drawings and models for stairs, handrails, ladders, and other secondary steel components. Our detailing ensures safety, precision, and long-term durability, while strictly complying with industry standards and project specifications. This project highlights our expertise in miscellaneous steel detailing, coordination, and constructible shop drawings for efficient fabrication and installation.',
     highlights: [
       'Two 15-storey escape stair towers',
       'Embed plate detailing',
       'Connection modeling & RFI coordination',
       'High-rise geometry challenges',
-      'Completed within 40 days across 4 phases',
+      'Completed within 40 days',
     ],
     stats: [
       { label: 'Structural Steel', value: '80+ tons' },
-      { label: 'Misc Steel', value: '30+ tons' },
       { label: 'Project Height', value: '15 storeys' },
       { label: 'Delivery Time', value: '40 days' },
     ],
     images: [
-      'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop',
+      '/assets/Model snaps/Villa Latella/snap_001.jpg',
+      '/assets/Model snaps/Villa Latella/snap_098.jpg',
     ],
   },
   {
-    id: 'skyline-logistics',
-    title: 'Skyline Logistics Hub',
-    industry: 'Infrastructure & Transport',
-    location: 'Chicago, USA',
-    details: '180,000 sq ft warehouse steel framing with complex truss systems and loading dock infrastructure.',
-    highlights: [
-      'Complex truss detailing',
-      '4-week turnaround',
-      'Heavy crane runway systems',
-      'Loading dock integration',
-    ],
-    images: [
-      'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&h=600&fit=crop',
-    ],
-  },
-  {
-    id: 'greenleaf-pharma',
-    title: 'GreenLeaf Pharmaceuticals Plant',
-    industry: 'Industrial & Manufacturing',
-    location: 'Toronto, Canada',
-    details: '5-story processing facility with heavy mezzanine structures and specialized equipment supports.',
-    highlights: [
-      'AISC-compliant moment connections',
-      'Point cloud to BIM integration',
-      'Vibration-sensitive equipment platforms',
-      'Clean room structural requirements',
-    ],
-    images: [
-      'https://images.unsplash.com/photo-1582719471384-894fbb16e074?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop',
-    ],
-  },
-  {
-    id: 'oceanview-towers',
-    title: 'OceanView Residential Towers',
-    industry: 'Residential & Mixed-Use',
-    location: 'Sydney, Australia',
-    details: 'Twin 20-floor towers with integrated balcony steel and architectural features.',
-    highlights: [
-      'Custom railing and architectural steel detailing',
-      'Balcony integration systems',
-      'Wind load considerations',
-      'Seismic design compliance',
-    ],
-    images: [
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&h=600&fit=crop',
-    ],
-  },
-  {
-    id: 'metro-hospital',
-    title: 'Metro Central Hospital Extension',
+    id: 'yul-desjardins-lounge',
+    title: 'YUL Desjardins Lounge',
     industry: 'Commercial & Institutional',
-    location: 'Bengaluru, India',
-    details: 'New surgical wing with complex stair and railing systems, medical equipment supports.',
+    location: 'Montreal Airport, Canada',
+    details: 'Our project delivers high-quality miscellaneous steel detailing services, providing accurate drawings and models for stairs, handrails, ladders, and other secondary steel components. Our detailing ensures safety, precision, and long-term durability, while strictly complying with industry standards and project specifications. This project highlights our expertise in miscellaneous steel detailing, coordination, and constructible shop drawings for efficient fabrication and installation.',
     highlights: [
-      'Fast-track revisions',
-      'Multi-discipline coordination',
-      'Medical equipment integration',
-      'Critical infrastructure detailing',
+      'High-end architectural finishes',
+      'Curved steel elements',
+      'Airport security constraints',
+      'Premium aesthetic requirements',
     ],
     images: [
-      'https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?w=800&h=600&fit=crop',
-      'https://images.unsplash.com/photo-1586773860418-d37222d8eeb4?w=800&h=600&fit=crop',
+      '/assets/Model snaps/YUL Desjardins Lounge/1.jpg',
+      '/assets/Model snaps/YUL Desjardins Lounge/2.jpg',
+      '/assets/Model snaps/YUL Desjardins Lounge/3.jpg',
     ],
   },
 ];
@@ -381,14 +444,14 @@ export const SEO_DATA = {
   pages: {
     home: {
       title: 'V4U Steel Detailing Services - Where Precision Meets Passion',
-      description: 'Expert steel detailing services with AISC, CISC & ASI compliance using Tekla Structures. Structural & miscellaneous steel detailing for fabricators and contractors.',
+      description: 'Expert steel detailing services with AISC, CISC, ASI, BS & EURO CODE compliance using Tekla Structures. Structural & miscellaneous steel detailing for fabricators and contractors.',
     },
     about: {
       title: 'About V4U Steel Detailing - Expert Team & Company Story',
-      description: 'Learn about V4U Steel Detailing Services team, our commitment to precision, and international standards compliance (AISC, CISC, ASI).',
+      description: 'Learn about V4U Steel Detailing Services team, our commitment to precision, and international standards compliance (AISC, CISC, ASI, BS & EURO CODE).',
     },
     services: {
-      title: 'Steel Detailing Services - AISC, CISC & ASI Compliance',
+      title: 'Steel Detailing Services - AISC, CISC, ASI, BS & EURO CODE Compliance',
       description: 'Comprehensive steel detailing services including structural steel, metalwork, connections, material takeoff, and shop drawings using Tekla Structures.',
     },
     projects: {

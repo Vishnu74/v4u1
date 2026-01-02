@@ -7,7 +7,7 @@ Place your service images in this directory with these exact filenames:
 2. metalwork.jpg             → Metalwork Detailing
 3. connections.jpg           → Connection Design
 4. estimation.jpg            → Material Take-Off & Estimation
-5. pointcloud.jpg            → Point Cloud to BIM Conversion
+5. pointcloud.jpg            → Scan To Build Conversion
 6. shop-drawings.jpg         → Shop Drawing & CNC File Generation
 
 Image Specs:

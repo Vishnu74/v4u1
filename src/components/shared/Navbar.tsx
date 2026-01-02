@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useDesign } from '../../contexts/DesignContext';
-import { SITE_INFO, DESIGN_PRESETS } from '../../data/data';
-import { Building2, Menu, X, ChevronDown } from 'lucide-react';
+import { DESIGN_PRESETS } from '../../data/data';
+import { Menu, X, ChevronDown } from 'lucide-react';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,32 +31,23 @@ export const Navbar: React.FC = () => {
   return (
     <nav className="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            {/* <div className="bg-brand-600 p-2 rounded-lg">
-              <Building2 className="h-6 w-6 text-white" />
-            </div> */}
-
-            <div className="px-2 rounded-lg"
-            >
+          <Link to="/" className="flex items-center gap-1 group">
+            <div className="h-20 w-20 flex items-center justify-center overflow-hidden rounded-lg pb-2">
               <img
-                src="/assets/v4ulogo1.jpeg"
+                src="/assets/UpdatedLogo/v4ulogo.png"
                 alt="V4U Logo"
-                className="h-14 w-14 object-contain"
+                className="h-full w-full object-cover scale-125"
               />
             </div>
-
-            {/* <div className="hidden sm:block font-bold text-xl text-gray-900">
-              {SITE_INFO.name.split(' ')[0]}
-            </div> */}
-
-
-
-
-            <div>
-              <div className="text-lg font-bold text-gray-900">{SITE_INFO.name.split(' ')[0]}</div>
-              <div className="text-xs text-gray-600">Steel Detailing Services</div>
+            <div className="flex flex-col justify-center">
+              <span className="text-2xl font-bold text-gray-900 tracking-tight uppercase leading-none group-hover:text-brand-700 transition-colors">
+                V4U
+              </span>
+              <span className="text-sm font-bold text-brand-600 tracking-[0.2em] uppercase leading-tight">
+                Steel Detailing
+              </span>
             </div>
           </Link>
 

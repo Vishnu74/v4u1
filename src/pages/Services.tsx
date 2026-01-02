@@ -4,10 +4,21 @@ import { SEOHead } from '../components/SEOHead';
 import { ServiceCard } from '../components/ServiceCard';
 import { SERVICES, INDUSTRIES, SEO_DATA } from '../data/data';
 import { X, ArrowRight, CheckCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Services: React.FC = () => {
   const [selectedService, setSelectedService] = useState<string | null>(null);
+  const location = useLocation();
+
+  React.useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
 
   const openServiceModal = (serviceId: string) => {
     setSelectedService(serviceId);
@@ -146,7 +157,7 @@ const Services: React.FC = () => {
             <Link
               to="/contact"
               className="bg-white text-brand-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center space-x-2"
-              // className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center space-x-2 shadow-xl hover:shadow-2xl hover:scale-105"
+            // className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 inline-flex items-center justify-center space-x-2 shadow-xl hover:shadow-2xl hover:scale-105"
             >
               <span>Contact Us Today</span>
               <ArrowRight className="h-5 w-5" />

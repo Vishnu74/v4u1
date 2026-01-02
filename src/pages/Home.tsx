@@ -229,10 +229,10 @@ const Home: React.FC = () => {
             <blockquote className="text-2xl md:text-3xl font-light leading-relaxed mb-8">
               "At V4U Detailing Services, we believe that precision is more than just accuracy — it's a promise. Every model, every drawing, and every connection we detail reflects our commitment to quality, efficiency, and collaboration."
             </blockquote>
-            <div className="text-lg">
+            {/* <div className="text-lg">
               <div className="font-semibold">{FOUNDERS_MESSAGE.signature}</div>
               <div className="text-brand-100">{FOUNDERS_MESSAGE.title}</div>
-            </div>
+            </div> */}
           </motion.div>
         </div>
       </section>

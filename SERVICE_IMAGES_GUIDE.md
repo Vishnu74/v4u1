@@ -31,7 +31,7 @@ Place your service images in the `public/assets/service/` folder with the follow
 **Recommended subject:** Blueprint plans, technical drawings, calculator with plans, or material lists
 
 ### 5. pointcloud.jpg
-**Service:** Point Cloud to BIM Conversion
+**Service:** Scan To Build Conversion
 **Recommended subject:** 3D laser scanner, point cloud visualization, BIM model, or as-built scanning
 
 ### 6. shop-drawings.jpg
