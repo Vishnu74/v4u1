@@ -42,7 +42,7 @@ const About: React.FC = () => {
               <h2 className="text-4xl font-bold text-gray-900 mb-8">{ABOUT.heading}</h2>
               <div className="text-lg text-gray-600 leading-relaxed space-y-6">
                 <p>{ABOUT.content}</p>
-                
+
                 <div className="bg-brand-50 p-6 rounded-lg">
                   <h3 className="text-xl font-semibold text-brand-800 mb-4">International Standards</h3>
                   <ul className="space-y-2">
@@ -57,6 +57,14 @@ const About: React.FC = () => {
                     <li className="flex items-center text-brand-700">
                       <CheckCircle className="h-5 w-5 text-brand-600 mr-3" />
                       ASI (Australian Steel Institute)
+                    </li>
+                    <li className="flex items-center text-brand-700">
+                      <CheckCircle className="h-5 w-5 text-brand-600 mr-3" />
+                      BS (British Steel)
+                    </li>
+                    <li className="flex items-center text-brand-700">
+                      <CheckCircle className="h-5 w-5 text-brand-600 mr-3" />
+                      EUROCODE
                     </li>
                   </ul>
                 </div>
@@ -75,10 +83,10 @@ const About: React.FC = () => {
                 alt="Steel Construction"
                 className="rounded-lg shadow-2xl"
               />
-              <div className="absolute -bottom-6 -left-6 bg-brand-600 text-white p-6 rounded-lg shadow-xl">
+              {/* <div className="absolute -bottom-6 -left-6 bg-brand-600 text-white p-6 rounded-lg shadow-xl">
                 <div className="text-3xl font-bold">15+</div>
                 <div className="text-brand-100">Years Experience</div>
-              </div>
+              </div> */}
             </motion.div>
           </div>
         </div>
@@ -183,7 +191,7 @@ const About: React.FC = () => {
             className="text-center"
           >
             <h2 className="text-4xl font-bold mb-12">Founder's Message</h2>
-            
+
             <div className="bg-gray-800 p-8 rounded-xl">
               <div className="prose prose-lg prose-invert max-w-none">
                 {FOUNDERS_MESSAGE.content.split('\n\n').map((paragraph, index) => (
@@ -192,9 +200,9 @@ const About: React.FC = () => {
                   </p>
                 ))}
               </div>
-              
+
               <div className="mt-8 pt-8 border-t border-gray-700 text-center">
-                <div className="text-xl font-semibold">{FOUNDERS_MESSAGE.signature}</div>
+                {/* <div className="text-xl font-semibold">{FOUNDERS_MESSAGE.signature}</div> */}
                 <div className="text-gray-400">{FOUNDERS_MESSAGE.title}</div>
                 <div className="text-gray-500">{FOUNDERS_MESSAGE.company}</div>
               </div>
@@ -204,7 +212,7 @@ const About: React.FC = () => {
       </section>
 
       {/* Team Structure */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -249,7 +257,7 @@ const About: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 };

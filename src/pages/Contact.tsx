@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
-    
+
     // Clear error when user starts typing
     if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     if (!validateForm()) {
       return;
     }
@@ -77,10 +77,10 @@ const Contact: React.FC = () => {
     try {
       // Log form data to console for demonstration
       console.log('Form submitted:', formData);
-      
+
       // Simulate API delay
       await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
       setIsSubmitted(true);
       setFormData({
         name: '',
@@ -103,7 +103,7 @@ const Contact: React.FC = () => {
           title={SEO_DATA.pages.contact.title}
           description={SEO_DATA.pages.contact.description}
         />
-        
+
         <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -167,7 +167,7 @@ const Contact: React.FC = () => {
             >
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">Get In Touch</h2>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4">
                     <div className="bg-brand-100 p-3 rounded-lg">
@@ -229,11 +229,11 @@ const Contact: React.FC = () => {
                   <p className="text-brand-700 text-sm leading-relaxed">
                     {CONTACT_INFO.ctaText}
                   </p>
-                  <div className="mt-4 pt-4 border-t border-brand-200">
+                  {/* <div className="mt-4 pt-4 border-t border-brand-200">
                     <p className="text-brand-600 text-sm">{CONTACT_INFO.founderSignoff}</p>
                     <p className="text-brand-800 font-semibold">{CONTACT_INFO.founderName}</p>
                     <p className="text-brand-600 text-sm">{CONTACT_INFO.founderTitle}</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </motion.div>
@@ -247,7 +247,7 @@ const Contact: React.FC = () => {
             >
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">Send us a Message</h2>
-                
+
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
@@ -260,9 +260,8 @@ const Contact: React.FC = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors ${
-                          errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
-                        }`}
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors ${errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                          }`}
                         placeholder="Your full name"
                       />
                       {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
@@ -278,9 +277,8 @@ const Contact: React.FC = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleInputChange}
-                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors ${
-                          errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
-                        }`}
+                        className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors ${errors.email ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                          }`}
                         placeholder="your.email@example.com"
                       />
                       {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
@@ -329,9 +327,8 @@ const Contact: React.FC = () => {
                       rows={6}
                       value={formData.message}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors resize-none ${
-                        errors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'
-                      }`}
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-colors resize-none ${errors.message ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                        }`}
                       placeholder="Tell us about your project requirements, timeline, and any specific needs..."
                     />
                     {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}

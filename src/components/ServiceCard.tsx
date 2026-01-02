@@ -42,11 +42,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           }}
         />
 
-        <div className="absolute top-4 right-4 z-20">
-          <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
-            <span className="text-brand-600 font-semibold text-sm">Premium Service</span>
-          </div>
-        </div>
+
       </div>
 
       <div className="p-8">
@@ -72,7 +68,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           </ul>
         </div>
 
-        <div className="flex items-center justify-between pt-6 border-t border-gray-100">
+        {/* <div className="flex items-center justify-between pt-6 border-t border-gray-100">
           <button className="text-brand-600 hover:text-brand-700 font-semibold flex items-center space-x-2 transition-all duration-300 group-hover:space-x-3">
             <span>Learn More</span>
             <ArrowRight className="h-4 w-4" />
@@ -81,7 +77,7 @@ export const ServiceCard: React.FC<ServiceCardProps> = ({
           <div className="w-12 h-12 rounded-full bg-brand-50 flex items-center justify-center group-hover:bg-brand-600 transition-colors duration-300">
             <ArrowRight className="h-5 w-5 text-brand-600 group-hover:text-white transition-colors duration-300" />
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="absolute inset-0 border-2 border-transparent group-hover:border-brand-200 rounded-2xl transition-colors duration-500 pointer-events-none"></div>

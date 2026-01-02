@@ -39,19 +39,19 @@ export interface Industry {
 }
 
 export const SITE_INFO = {
-  name: 'V4U STEEL DETAILING SERVICES',
+  name: 'V4U STEEL DETAILING',
   phone: '+91 8098315403',
   linkedin: 'https://www.linkedin.com/company/v4u-steel-detailers',
   email: 'v4udetailers@gmail.com',
   address: 'Rasipuram, Tamilnadu, India',
   tagline: 'Where Precision Meets Passion',
-  shortWelcome: `Hi There! Welcome to V4U Steel Detailing Services – where precision meets passion in every beam and bolt. We are a dedicated team of experienced steel detailers committed to delivering high-quality structural and miscellaneous steel detailing services. With a strong foundation in AISC, CISC and ASI standards and hands-on expertise in Tekla Structures, we help fabricators, engineers, and general contractors bring their visions to life with accuracy and efficiency. Whether you're building bridges, commercial spaces, or custom stair systems – we're here to detail your success.`,
+  shortWelcome: `Hi There! Welcome to V4U Steel Detailing  – where precision meets passion in every beam and bolt. We are a dedicated team of experienced steel detailers committed to delivering high-quality structural and miscellaneous steel detailing services. With a strong foundation in AISC, BS and EURO CODE standards and hands-on expertise in Tekla Structures, we help fabricators, engineers, and general contractors bring their visions to life with accuracy and efficiency. Whether you're building bridges, commercial spaces, or custom stair systems – we're here to detail your success.`,
 };
 
 export const HERO_CONTENT = {
   title: 'V4U STEEL DETAILING SERVICES',
-  subtitle: 'Excellence in Every Detail',
-  description: 'Expert steel detailing services with AISC, CISC & ASI compliance using Tekla Structures.',
+  subtitle: 'Where Precision Meets Passion',
+  description: 'Expert steel detailing services with AISC, CISC, ASI, BS & EURO CODE compliance using Tekla Structures.',
   ctaText: 'Start Your Project',
   ctaSecondary: 'View Portfolio',
 };
@@ -59,11 +59,11 @@ export const HERO_CONTENT = {
 export const ABOUT = {
   heading: 'About Us',
   content: `V4U Detailing Services is a quality-driven steel detailing firm specializing in both structural and miscellaneous steel detailing using Tekla Structures. Backed by a team of experienced professionals, we deliver fabrication-ready drawings with accuracy, efficiency, and clarity. Our team is well-versed in international detailing standards, including: AISC (American Institute of Steel Construction), CISC (Canadian Institute of Steel Construction), ASI (Australian Steel Institute).`,
-  
+
   whyChooseUs: [
     {
       title: 'Unmatched Accuracy',
-      description: 'We follow AISC, CISC, and ASI standards strictly, ensuring every drawing and model is fabrication-ready and clash-free.',
+      description: 'We follow AISC, CISC, ASI, BS & EURO CODE standards strictly, ensuring every drawing and model is fabrication-ready and clash-free.',
     },
     {
       title: 'Responsive & Reliable',
@@ -71,10 +71,10 @@ export const ABOUT = {
     },
     {
       title: 'End-to-End Detailing',
-      description: 'From initial IFC drawings to final fabrication packages, we handle everything — including revisions, RFIs, connection modeling, and file generation.',
+      description: 'From initial IFA drawings to final fabrication packages, we handle everything — including revisions, RFIs, connection design, and reports generation.',
     },
     {
-      title: 'Flexible Engagement Models',
+      title: 'Flexible pricing options',
       description: 'Hourly, lump-sum, or milestone-based — we work the way that suits your project and budget.',
     },
   ],
@@ -87,11 +87,11 @@ export const FOUNDERS_MESSAGE = {
 
   When you partner with V4U, you're not just getting a service provider — you're gaining a teammate who understands the critical role that precision plays in your success. We take pride in being the reliable partner who delivers on time, communicates clearly, and stands behind every drawing we produce.
 
-  Thank you for considering V4U Detailing Services. We look forward to building something exceptional together.`,
-  
+  Thank you for considering V4U Steel Detailings. We look forward to building something exceptional together.`,
+
   signature: 'Muralikrishnan S',
-  title: 'Founder & Managing Director',
-  company: 'V4U Detailing Services',
+  title: 'Founder',
+  company: 'V4U Steel Detailings',
 };
 
 export const HOW_WE_WORK = [
@@ -116,8 +116,8 @@ export const SERVICES: Service[] = [
   {
     id: 'structural',
     title: 'Structural Steel Detailing',
-    description: 'Comprehensive structural steel detailing with full AISC/CISC/ASI compliance for beams, columns, braces, anchor plans, frames, and base plates.',
-    features: ['AISC/CISC/ASI Standards', 'Connection Design', 'Fabrication Drawings', 'Erection Plans'],
+    description: 'Comprehensive structural steel detailing with full AISC/CISC/ASI/BS/EUROCODE compliance for beams, columns, braces, anchor plans, frames, and base plates.',
+    features: ['AISC/CISC/ASI/BS/EUROCODE Standards', 'Connection Design', 'Fabrication Drawings', 'Erection Plans'],
     icon: 'Building2',
     imagePath: '/assets/Service/STRUCTURAL.jpg',
   },
@@ -125,7 +125,7 @@ export const SERVICES: Service[] = [
     id: 'metalwork',
     title: 'Metalwork Detailing',
     description: 'Specialized detailing for stairs, handrails, ramps, guards, balustrades, grating, and miscellaneous architectural steel elements.',
-    features: ['Stair Systems', 'Handrails & Guards', 'Architectural Steel', 'Custom Fabrication'],
+    features: ['Stair Systems', 'Handrails & Guard Rails', 'All Architectural Steel (Ladder, Balustrade,etc...)', 'Custom Fabrication'],
     icon: 'Stairs',
     imagePath: '/assets/Service/METAL WORKS.png',
   },
@@ -362,11 +362,11 @@ export const DESIGN_PRESETS = {
 export const CONTACT_INFO = {
   ctaHeading: "Let's Work Together",
   ctaText: `Ready to start your next steel detailing project? We're here to help you achieve precision, meet your deadlines, and exceed your expectations. Whether you need structural detailing, miscellaneous steel work, or connection design – let's discuss how we can support your success.`,
-  
+
   founderSignoff: `Looking forward to partnering with you,`,
   founderName: 'Muralikrishnan S',
   founderTitle: 'Founder & Managing Director, V4U Detailing Services',
-  
+
   mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d125129.20673448914!2d78.12858212842578!3d11.459147009888406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babc20ec06afb6f%3A0x45b97c5f12fb6da9!2sRasipuram%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1761978958278!5m2!1sen!2sin',
 };
 
@@ -374,7 +374,7 @@ export const SEO_DATA = {
   defaultTitle: 'V4U Steel Detailing Services 2025 - Expert Steel Detailing',
   defaultDescription: 'Professional steel detailing services with AISC, CISC & ASI compliance. Expert Tekla Structures modeling for structural and miscellaneous steel projects.',
   defaultImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=630&fit=crop',
-  
+
   pages: {
     home: {
       title: 'V4U Steel Detailing Services - Where Precision Meets Passion',
