@@ -399,5 +399,69 @@ export const SEO_DATA = {
       title: 'Contact V4U Steel Detailing Services - Get Your Quote',
       description: 'Contact V4U Steel Detailing Services for your next project. Call +91 8098315403 or email v4udetailers@gmail.com for expert steel detailing.',
     },
+    careers: {
+      title: 'Careers at V4U - Join Our Steel Detailing Team',
+      description: 'Explore career opportunities at V4U Steel Detailing. Join our team of experts in Tekla Structures and structural steel detailing.',
+    },
   },
+};
+
+export const CAREERS_DATA = {
+  hero: {
+    title: 'Join Our Team',
+    subtitle: 'Build Your Career with V4U',
+    description: 'We are always looking for talented individuals who share our passion for precision and excellence in steel detailing.',
+  },
+  benefits: [
+    {
+      title: 'Professional Growth',
+      description: 'Continuous learning opportunities and training in latest Tekla Structures features and international standards.',
+      icon: 'TrendingUp',
+    },
+    {
+      title: 'Global Projects',
+      description: 'Work on challenging international projects from USA, Canada, Australia, and UK.',
+      icon: 'Globe',
+    },
+    {
+      title: 'Modern Technology',
+      description: 'Access to high-end workstations and latest licensed software tools for efficient detailing.',
+      icon: 'Monitor',
+    },
+    {
+      title: 'Work-Life Balance',
+      description: 'Supportive work environment with flexible policies to maintain a healthy work-life integration.',
+      icon: 'Heart',
+    },
+  ],
+  jobs: [
+    {
+      id: 'sr-tekla-modeler',
+      title: 'Senior Tekla Modeler',
+      location: 'Rasipuram, Tamilnadu',
+      type: 'Full-time',
+      experience: '5+ years',
+      description: 'We are looking for an experienced Tekla Modeler to lead complex structural steel projects.',
+      requirements: [
+        'Proficiency in Tekla Structures (Steel)',
+        'Experience with AISC/CISC standards',
+        'Ability to handle projects independently',
+        'Strong problem-solving skills',
+      ],
+    },
+    {
+      id: 'jr-steel-detailer',
+      title: 'Junior Steel Detailer',
+      location: 'Rasipuram, Tamilnadu',
+      type: 'Full-time',
+      experience: '1-3 years',
+      description: 'Join our team as a Junior Detailer and grow your skills in a professional environment.',
+      requirements: [
+        'Basic knowledge of Tekla Structures',
+        'Understanding of engineering drawings',
+        'Willingness to learn and adapt',
+        'Diploma/Degree in Civil/Mechanical Engineering',
+      ],
+    },
+  ],
 };

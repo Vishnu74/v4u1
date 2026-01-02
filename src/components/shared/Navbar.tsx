@@ -16,6 +16,7 @@ export const Navbar: React.FC = () => {
     { name: 'About', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Projects', href: '/projects' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -40,7 +41,7 @@ export const Navbar: React.FC = () => {
             <div className="px-2 rounded-lg"
             >
               <img
-                src="/assets/v4ulogo1.jpeg" 
+                src="/assets/v4ulogo1.jpeg"
                 alt="V4U Logo"
                 className="h-14 w-14 object-contain"
               />
@@ -66,8 +67,8 @@ export const Navbar: React.FC = () => {
                 key={item.name}
                 to={item.href}
                 className={`px-3 py-2 text-sm font-medium transition-colors ${location.pathname === item.href
-                    ? 'text-brand-600 border-b-2 border-brand-600'
-                    : 'text-gray-700 hover:text-brand-600'
+                  ? 'text-brand-600 border-b-2 border-brand-600'
+                  : 'text-gray-700 hover:text-brand-600'
                   }`}
               >
                 {item.name}
@@ -94,8 +95,8 @@ export const Navbar: React.FC = () => {
                         setDesignDropdownOpen(false);
                       }}
                       className={`w-full text-left px-4 py-2 text-sm transition-colors ${currentDesign === option.value
-                          ? 'bg-brand-50 text-brand-600'
-                          : 'text-gray-700 hover:bg-gray-50'
+                        ? 'bg-brand-50 text-brand-600'
+                        : 'text-gray-700 hover:bg-gray-50'
                         }`}
                     >
                       {option.label}
@@ -131,8 +132,8 @@ export const Navbar: React.FC = () => {
                 to={item.href}
                 onClick={() => setIsOpen(false)}
                 className={`block px-4 py-2 text-sm font-medium transition-colors ${location.pathname === item.href
-                    ? 'text-brand-600 bg-brand-50'
-                    : 'text-gray-700 hover:text-brand-600 hover:bg-gray-50'
+                  ? 'text-brand-600 bg-brand-50'
+                  : 'text-gray-700 hover:text-brand-600 hover:bg-gray-50'
                   }`}
               >
                 {item.name}
@@ -150,8 +151,8 @@ export const Navbar: React.FC = () => {
                     setIsOpen(false);
                   }}
                   className={`block w-full text-left px-2 py-1 text-sm transition-colors rounded ${currentDesign === option.value
-                      ? 'bg-brand-100 text-brand-600'
-                      : 'text-gray-600 hover:bg-gray-100'
+                    ? 'bg-brand-100 text-brand-600'
+                    : 'text-gray-600 hover:bg-gray-100'
                     }`}
                 >
                   {option.label}
