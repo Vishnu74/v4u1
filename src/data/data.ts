@@ -99,16 +99,19 @@ export const HOW_WE_WORK = [
     step: 1,
     title: 'Understanding Your Project',
     description: 'We begin by reviewing your architectural, structural, and IFC drawings to fully understand project scope, specifications, and timeline requirements.',
+    icon: 'ClipboardList',
   },
   {
     step: 2,
     title: 'Modeling & Drawing Production',
     description: 'Using Tekla Structures, we model the entire structure with precise connections, generate fabrication drawings, and create comprehensive material lists.',
+    icon: 'PenTool',
   },
   {
     step: 3,
     title: 'Revisions & Final Deliverables',
     description: 'Based on markups and RFI resolutions, we provide updated IFC drawings, final fabrication packages including BOMs, NC/DXF files, and erection drawings.',
+    icon: 'CheckCircle',
   },
 ];
 

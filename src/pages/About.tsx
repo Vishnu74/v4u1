@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SEOHead } from '../components/SEOHead';
 import { ABOUT, FOUNDERS_MESSAGE, HOW_WE_WORK, TEAM_STRUCTURE, SEO_DATA } from '../data/data';
-import { CheckCircle, User, ArrowRight } from 'lucide-react';
+import { CheckCircle, User, ArrowRight, ClipboardList, PenTool } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
@@ -130,52 +130,92 @@ const About: React.FC = () => {
       </section>
 
       {/* How We Work */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-gray-50 relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-100/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-100/30 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">How We Work</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our proven process ensures quality deliverables on every project
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-display">How We Work</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Our proven process ensures quality deliverables on every project, seamlessly moving from initial concept to final fabrication.
             </p>
           </motion.div>
 
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-brand-200 hidden md:block"></div>
+            {/* Central Timeline Line (Desktop) */}
+            <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-brand-200 via-brand-400 to-brand-200 rounded-full"></div>
 
-            <div className="space-y-12">
-              {HOW_WE_WORK.map((step, index) => (
-                <motion.div
-                  key={step.step}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className={`flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-                >
-                  <div className="flex-1 md:pr-8">
-                    <div className={`bg-white p-8 rounded-xl shadow-lg ${index % 2 === 1 ? 'md:ml-8' : 'md:mr-8'}`}>
-                      <div className="flex items-center mb-4">
-                        <div className="bg-brand-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold mr-4">
+            <div className="space-y-16">
+              {HOW_WE_WORK.map((step, index) => {
+                const Icon = step.icon === 'ClipboardList' ? ClipboardList : step.icon === 'PenTool' ? PenTool : CheckCircle;
+
+                return (
+                  <motion.div
+                    key={step.step}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.7, delay: index * 0.2 }}
+                    viewport={{ once: true }}
+                    className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                  >
+                    {/* Content Card */}
+                    <div className="flex-1 md:w-1/2">
+                      <div className={`
+                        relative bg-white p-8 rounded-2xl shadow-xl border border-gray-100 
+                        hover:shadow-2xl transition-all duration-300 group
+                        ${index % 2 === 0 ? 'md:mr-12 md:text-right' : 'md:ml-12 md:text-left'}
+                      `}>
+                        {/* Mobile Number Badge */}
+                        <div className="md:hidden absolute -top-5 left-1/2 transform -translate-x-1/2 bg-brand-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold shadow-lg z-20 border-4 border-gray-50">
                           {step.step}
                         </div>
-                        <h3 className="text-xl font-semibold text-gray-900">{step.title}</h3>
-                      </div>
-                      <p className="text-gray-600 leading-relaxed">{step.description}</p>
-                    </div>
-                  </div>
 
-                  {/* Center circle for desktop */}
-                  <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-brand-600 rounded-full z-10"></div>
-                </motion.div>
-              ))}
+                        <div className={`flex flex-col ${index % 2 === 0 ? 'md:items-end' : 'md:items-start'} items-center`}>
+                          <div className="p-3 bg-brand-50 rounded-xl mb-4 text-brand-600 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
+                            <Icon size={32} strokeWidth={1.5} />
+                          </div>
+
+                          <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-brand-700 transition-colors">
+                            {step.title}
+                          </h3>
+                          <p className="text-gray-600 leading-relaxed">
+                            {step.description}
+                          </p>
+                        </div>
+
+                        {/* Arrow decorations relating to flow (optional/subtle) */}
+                        <div className={`absolute top-1/2 transform -translate-y-1/2 ${index % 2 === 0 ? '-right-2' : '-left-2'} hidden md:block text-brand-200`}>
+                          {/* <ArrowRight size={24} className={index % 2 === 0 ? '' : 'rotate-180'} /> */}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Spacer for the other side */}
+                    <div className="hidden md:block flex-1 md:w-1/2"></div>
+
+                    {/* Center Timeline Node */}
+                    <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center justify-center">
+                      <div className="w-12 h-12 bg-white rounded-full border-4 border-brand-500 shadow-xl flex items-center justify-center z-10 transition-transform duration-500 hover:scale-125">
+                        <span className="text-brand-700 font-bold text-sm">{step.step}</span>
+                      </div>
+                    </div>
+                  </motion.div>
+                );
+              })}
             </div>
+
+            {/* End Node */}
+            <div className="hidden md:block absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-4 h-4 bg-brand-300 rounded-full border-2 border-white shadow-sm"></div>
           </div>
         </div>
       </section>
@@ -203,7 +243,7 @@ const About: React.FC = () => {
 
               <div className="mt-8 pt-8 border-t border-gray-700 text-center">
                 {/* <div className="text-xl font-semibold">{FOUNDERS_MESSAGE.signature}</div> */}
-                <div className="text-gray-400">{FOUNDERS_MESSAGE.title}</div>
+                {/* <div className="text-gray-400">{FOUNDERS_MESSAGE.title}</div> */}
                 <div className="text-gray-500">{FOUNDERS_MESSAGE.company}</div>
               </div>
             </div>
