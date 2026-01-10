@@ -3,21 +3,21 @@ import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { ServiceCard } from '../components/ServiceCard';
-import { SITE_INFO, HERO_CONTENT, ABOUT, SERVICES, FOUNDERS_MESSAGE, DESIGN_PRESETS, SEO_DATA } from '../data/data';
+import { SITE_INFO, HERO_CONTENT, ABOUT, SERVICES, DESIGN_PRESETS, SEO_DATA } from '../data/data';
 import { useDesign } from '../contexts/DesignContext';
-import { ArrowRight, Phone, Mail, CheckCircle, Star, Users, Award, Linkedin } from 'lucide-react';
+import { ArrowRight, Phone, Mail, CheckCircle, Linkedin } from 'lucide-react';
 
 const Home: React.FC = () => {
   const { currentDesign } = useDesign();
   const navigate = useNavigate();
   const currentDesignData = DESIGN_PRESETS[currentDesign as keyof typeof DESIGN_PRESETS];
 
-  const stats = [
-    { icon: Users, label: 'Projects Completed', value: '150+' },
-    { icon: Award, label: 'Years Experience', value: '15+' },
-    { icon: CheckCircle, label: 'Happy Clients', value: '50+' },
-    { icon: Star, label: 'Quality Rating', value: '5.0' },
-  ];
+  // const stats = [
+  //   { icon: Users, label: 'Projects Completed', value: '150+' },
+  //   { icon: Award, label: 'Years Experience', value: '15+' },
+  //   { icon: CheckCircle, label: 'Happy Clients', value: '50+' },
+  //   { icon: Star, label: 'Quality Rating', value: '5.0' },
+  // ];
 
   const handleServiceClick = () => {
     navigate('/services');

@@ -1,6 +1,5 @@
 // Central data store for V4U Steel Detailing Services
 
-import { Linkedin } from "lucide-react";
 
 export interface Project {
   id: string;
@@ -122,7 +121,7 @@ export const SERVICES: Service[] = [
     description: 'Comprehensive structural steel detailing with full AISC/CISC/ASI/BS/EUROCODE compliance for beams, columns, braces, anchor plans, frames, and base plates.',
     features: ['AISC/CISC/ASI/BS/EUROCODE Standards', 'Connection Design', 'Fabrication Drawings', 'Erection Plans'],
     icon: 'Building2',
-    imagePath: '/assets/Service/STRUCTURAL.jpg',
+    imagePath: '/assets/services/structural.jpg',
   },
   {
     id: 'metalwork',
@@ -130,7 +129,7 @@ export const SERVICES: Service[] = [
     description: 'Specialized detailing for stairs, handrails, ramps, guards, balustrades, grating, and miscellaneous architectural steel elements.',
     features: ['Stair Systems', 'Handrails & Guard Rails', 'All Architectural Steel (Ladder, Balustrade,etc...)', 'Custom Fabrication'],
     icon: 'Stairs',
-    imagePath: '/assets/Service/METAL WORKS.png',
+    imagePath: '/assets/services/metal_works.png',
   },
   {
     id: 'connections',
@@ -138,7 +137,7 @@ export const SERVICES: Service[] = [
     description: 'Expert connection design following AISC/CISC standards including end plate, base plate, clip angle, gusset, and splice connections.',
     features: ['End Plate Connections', 'Base Plate Design', 'Moment Connections', 'Splice Details'],
     icon: 'Link',
-    imagePath: '/assets/Service/CONNECTION DESIGN.jpg',
+    imagePath: '/assets/services/connection_design.jpg',
   },
   {
     id: 'estimation',
@@ -146,7 +145,7 @@ export const SERVICES: Service[] = [
     description: 'Accurate BOQ generation and preliminary quantity estimates to support project planning and budgeting.',
     features: ['Quantity Takeoffs', 'Material Lists', 'Cost Estimation', 'BOM Generation'],
     icon: 'Calculator',
-    imagePath: '/assets/Service/ESTIMATION 1.png',
+    imagePath: '/assets/services/estimation.png',
   },
   {
     id: 'pointcloud',
@@ -154,7 +153,7 @@ export const SERVICES: Service[] = [
     description: 'Convert 3D scan data into accurate BIM models for renovation and retrofit projects.',
     features: ['Scan to Model', 'As-Built Modeling', 'Clash Detection', 'Reality Capture'],
     icon: 'Scan',
-    imagePath: '/assets/Service/BIM CONVERSION 1.png',
+    imagePath: '/assets/services/scan_to_build.png',
   },
   {
     id: 'shopdraws',
@@ -162,7 +161,7 @@ export const SERVICES: Service[] = [
     description: 'Complete shop drawing packages with CNC-ready files including DXF, NC1, and BOM exports.',
     features: ['Shop Drawings', 'CNC Files', 'DXF/NC1 Export', 'Fabrication Ready'],
     icon: 'FileText',
-    imagePath: '/assets/Service/FABRICATION DRAWINGS.png',
+    imagePath: '/assets/services/fabrication_drawings.png',
   },
 ];
 
@@ -170,27 +169,27 @@ export const INDUSTRIES: Industry[] = [
   {
     title: 'Commercial & Institutional',
     description: 'Office buildings, schools, hospitals, and retail spaces requiring precise steel detailing for complex architectural and structural requirements.',
-    imagePath: '/assets/Service/Commercial & Institutional.png',
+    imagePath: '/assets/services/commercial_institutional.png',
   },
   {
     title: 'Industrial & Manufacturing',
     description: 'Warehouses, factories, and processing facilities with heavy structural loads and specialized equipment support requirements.',
-    imagePath: '/assets/Service/Industrial & Manufacturing.png',
+    imagePath: '/assets/services/industrial_manufacturing.png',
   },
   {
     title: 'Infrastructure & Transport',
     description: 'Bridges, transportation hubs, and infrastructure projects demanding the highest standards of structural integrity and safety.',
-    imagePath: '/assets/Service/Infrastructure & Transport.png',
+    imagePath: '/assets/services/infrastructure_transport.png',
   },
   {
     title: 'Residential & Mixed-Use',
     description: 'High-rise residential towers and mixed-use developments with complex steel framing and architectural features.',
-    imagePath: '/assets/Service/Residential & Mixed-Use.png',
+    imagePath: '/assets/services/residential_mixed_use.png',
   },
   {
     title: 'Retrofit & Renovation',
     description: 'Existing structure modifications and additions requiring careful integration with legacy construction.',
-    imagePath: '/assets/Service/RENOVATION.png',
+    imagePath: '/assets/services/renovation.png',
   },
 ];
 

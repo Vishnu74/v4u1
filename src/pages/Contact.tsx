@@ -73,24 +73,32 @@ const Contact: React.FC = () => {
 
     setIsSubmitting(true);
 
-    // Simulate form submission (since this is frontend-only)
     try {
-      // Log form data to console for demonstration
-      console.log('Form submitted:', formData);
-
-      // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 2000));
-
-      setIsSubmitted(true);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        message: '',
+      const response = await fetch('/send-mail.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSubmitted(true);
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          message: '',
+        });
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
     } catch (error) {
       console.error('Form submission error:', error);
+      alert('Failed to send message: ' + (error instanceof Error ? error.message : 'Unknown error'));
     } finally {
       setIsSubmitting(false);
     }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { SEOHead } from '../components/SEOHead';
-import { ABOUT, FOUNDERS_MESSAGE, HOW_WE_WORK, TEAM_STRUCTURE, SEO_DATA } from '../data/data';
-import { CheckCircle, User, ArrowRight, ClipboardList, PenTool } from 'lucide-react';
+import { ABOUT, FOUNDERS_MESSAGE, HOW_WE_WORK, SEO_DATA } from '../data/data';
+import { CheckCircle, ClipboardList, PenTool } from 'lucide-react';
 
 const About: React.FC = () => {
   return (
