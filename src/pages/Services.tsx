@@ -200,16 +200,25 @@ const Services: React.FC = () => {
                 </div>
 
                 <div className="space-y-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features & Capabilities</h4>
-                    <ul className="space-y-3">
-                      {selectedServiceData.features.map((feature, index) => (
-                        <li key={index} className="flex items-start space-x-3">
-                          <CheckCircle className="h-5 w-5 text-brand-600 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-600">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 mb-4">Key Features & Capabilities</h4>
+                      <ul className="space-y-3">
+                        {selectedServiceData.features.map((feature, index) => (
+                          <li key={index} className="flex items-start space-x-3">
+                            <CheckCircle className="h-5 w-5 text-brand-600 mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-600">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                    <div className="h-48 md:h-full rounded-lg overflow-hidden">
+                      <img
+                        src={selectedServiceData.imagePath}
+                        alt={selectedServiceData.title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                   </div>
 
                   <div className="bg-brand-50 p-6 rounded-lg">
@@ -221,12 +230,13 @@ const Services: React.FC = () => {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <button
+                    <Link
+                      to="/contact"
                       onClick={closeServiceModal}
-                      className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex-1"
+                      className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300 flex-1 text-center"
                     >
-                      Get Quote for This Service
-                    </button>
+                      Get Quote
+                    </Link>
                     <button
                       onClick={closeServiceModal}
                       className="border-2 border-gray-300 hover:border-gray-400 text-gray-700 px-6 py-3 rounded-lg font-semibold transition-colors duration-300"

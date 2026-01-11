@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
             <div className="flex items-center space-x-3 mb-4">
               <div className="bg-white p-1 rounded-lg">
                 <img
-                  src="/assets/UpdatedLogo/v4ulogo.png"
+                  src="/assets/UpdatedLogo/footer.jpeg"
                   alt="V4U Logo"
                   className="h-10 w-10 object-contain"
                 />
@@ -26,7 +26,7 @@ export const Footer: React.FC = () => {
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              Expert steel detailing services with AISC, CISC, ASI, BS & EURO CODE compliance using Tekla Structures.
+              Expert steel detailing services with AISC, CISC, ASI, BS & EURO CODE compliance
               Precision in every beam and bolt.
             </p>
 

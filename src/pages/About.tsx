@@ -79,8 +79,8 @@ const About: React.FC = () => {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=600&h=600&fit=crop"
-                alt="Steel Construction"
+                src="/assets/newlogo/about.png"
+                alt="V4U Team"
                 className="rounded-lg shadow-2xl"
               />
               {/* <div className="absolute -bottom-6 -left-6 bg-brand-600 text-white p-6 rounded-lg shadow-xl">

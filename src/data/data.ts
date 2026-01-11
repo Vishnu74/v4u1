@@ -41,10 +41,10 @@ export const SITE_INFO = {
   name: 'V4U STEEL DETAILING',
   phone: '+91 8098315403',
   linkedin: 'https://www.linkedin.com/company/v4u-steel-detailers',
-  email: 'v4udetailers@gmail.com',
+  email: 'info@v4usteeldetailing.com',
   address: 'Rasipuram, Tamilnadu, India',
   tagline: 'Where Precision Meets Passion',
-  shortWelcome: `Hi There! Welcome to V4U Steel Detailing  – where precision meets passion in every beam and bolt. We are a dedicated team of experienced steel detailers committed to delivering high-quality structural and miscellaneous steel detailing services. With a strong foundation in AISC, BS and EURO CODE standards and hands-on expertise in Tekla Structures, we help fabricators, engineers, and general contractors bring their visions to life with accuracy and efficiency. Whether you're building bridges, commercial spaces, or custom stair systems – we're here to detail your success.`,
+  shortWelcome: `Hi There! Welcome to V4U Steel Detailing - We are a dedicated team of experienced steel detailers committed to delivering high-quality structural and miscellaneous steel detailing services. With a strong foundation in AISC, BS and EURO CODE standards and hands-on expertise in Tekla Structures, we help fabricators, engineers, and general contractors bring their visions to life with accuracy and efficiency. Whether you're building bridges, commercial spaces, or custom stair systems – we're here to detail your success.`,
 };
 
 export const HERO_CONTENT = {
@@ -121,7 +121,7 @@ export const SERVICES: Service[] = [
     description: 'Comprehensive structural steel detailing with full AISC/CISC/ASI/BS/EUROCODE compliance for beams, columns, braces, anchor plans, frames, and base plates.',
     features: ['AISC/CISC/ASI/BS/EUROCODE Standards', 'Connection Design', 'Fabrication Drawings', 'Erection Plans'],
     icon: 'Building2',
-    imagePath: '/assets/services/structural.jpg',
+    imagePath: '/assets/services/structural.png',
   },
   {
     id: 'metalwork',
@@ -137,7 +137,7 @@ export const SERVICES: Service[] = [
     description: 'Expert connection design following AISC/CISC standards including end plate, base plate, clip angle, gusset, and splice connections.',
     features: ['End Plate Connections', 'Base Plate Design', 'Moment Connections', 'Splice Details'],
     icon: 'Link',
-    imagePath: '/assets/services/connection_design.jpg',
+    imagePath: '/assets/services/connection_design.png',
   },
   {
     id: 'estimation',
@@ -274,23 +274,23 @@ export const PROJECTS: Project[] = [
       '/assets/Model snaps/Place Cartier School/snap_004.jpg',
     ],
   },
-  {
-    id: 'solstice-platform',
-    title: 'Solstice Platform',
-    industry: 'Infrastructure & Transport',
-    location: 'International',
-    details: 'Our project delivers high-quality miscellaneous steel detailing services, providing accurate drawings and models for stairs, handrails, ladders, and other secondary steel components. Our detailing ensures safety, precision, and long-term durability, while strictly complying with industry standards and project specifications. This project highlights our expertise in miscellaneous steel detailing, coordination, and constructible shop drawings for efficient fabrication and installation.',
-    highlights: [
-      'High load capacity design',
-      'Dynamic load analysis',
-      'Corrosion-resistant detailing',
-      'Specialized equipment support',
-    ],
-    images: [
-      '/assets/Model snaps/Solstice Platform/snap_001.jpg',
-      '/assets/Model snaps/Solstice Platform/snap_002.jpg',
-    ],
-  },
+  // {
+  //   id: 'solstice-platform',
+  //   title: 'Solstice Platform',
+  //   industry: 'Infrastructure & Transport',
+  //   location: 'International',
+  //   details: 'Our project delivers high-quality miscellaneous steel detailing services, providing accurate drawings and models for stairs, handrails, ladders, and other secondary steel components. Our detailing ensures safety, precision, and long-term durability, while strictly complying with industry standards and project specifications. This project highlights our expertise in miscellaneous steel detailing, coordination, and constructible shop drawings for efficient fabrication and installation.',
+  //   highlights: [
+  //     'High load capacity design',
+  //     'Dynamic load analysis',
+  //     'Corrosion-resistant detailing',
+  //     'Specialized equipment support',
+  //   ],
+  //   images: [
+  //     '/assets/Model snaps/Solstice Platform/snap_001.jpg',
+  //     '/assets/Model snaps/Solstice Platform/snap_002.jpg',
+  //   ],
+  // },
   {
     id: 'ste-agathe',
     title: 'Ste-Agathe',
@@ -399,7 +399,7 @@ export const TEAM_STRUCTURE = [
 export const DESIGN_PRESETS = {
   design1: {
     name: 'Corporate Clean',
-    heroImage: '/assets/v4uhome.jpeg',
+    heroImage: '/assets/v4uhome.png',
     fireMessage: 'Engineering the Future',
   },
   design2: {
@@ -459,7 +459,7 @@ export const SEO_DATA = {
     },
     contact: {
       title: 'Contact V4U Steel Detailing Services - Get Your Quote',
-      description: 'Contact V4U Steel Detailing Services for your next project. Call +91 8098315403 or email v4udetailers@gmail.com for expert steel detailing.',
+      description: 'Contact V4U Steel Detailing Services for your next project. Call +91 8098315403 or email info@v4usteeldetailing.com for expert steel detailing.',
     },
     careers: {
       title: 'Careers at V4U - Join Our Steel Detailing Team',

@@ -34,21 +34,21 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-1 group">
-            <div className="h-20 w-20 flex items-center justify-center overflow-hidden rounded-lg pb-2">
+            <div className="h-22 w-40 flex items-center justify-center overflow-hidden rounded-lg pb-2">
               <img
-                src="/assets/UpdatedLogo/v4ulogo.png"
+                src="/assets/newlogo/v4uNavLogo.png"
                 alt="V4U Logo"
-                className="h-full w-full object-cover scale-125"
+                className="h-full w-full object-cover"
               />
             </div>
-            <div className="flex flex-col justify-center">
+            {/* <div className="flex flex-col justify-center">
               <span className="text-2xl font-bold text-gray-900 tracking-tight uppercase leading-none group-hover:text-brand-700 transition-colors">
                 V4U
               </span>
               <span className="text-sm font-bold text-brand-600 tracking-[0.2em] uppercase leading-tight">
                 Steel Detailing
               </span>
-            </div>
+            </div> */}
           </Link>
 
           {/* Desktop Navigation */}
