@@ -51,9 +51,9 @@ const Home: React.FC = () => {
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               {HERO_CONTENT.title}
             </h1>
-            <p className="text-2xl md:text-3xl text-white/90 mb-4 font-light">
+            {/* <p className="text-2xl md:text-3xl text-white/90 mb-4 font-light">
               {HERO_CONTENT.subtitle}
-            </p>
+            </p> */}
             <div className="hero-fire-message text-4xl md:text-5xl font-bold mb-8">
               {currentDesignData.fireMessage}
             </div>

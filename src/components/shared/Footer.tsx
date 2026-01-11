@@ -22,7 +22,7 @@ export const Footer: React.FC = () => {
               </div>
               <div>
                 <div className="text-xl font-bold">{SITE_INFO.name}</div>
-                <div className="text-gray-400">{SITE_INFO.tagline}</div>
+                {/* <div className="text-gray-400">{SITE_INFO.tagline}</div> */}
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">

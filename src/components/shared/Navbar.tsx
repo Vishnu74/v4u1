@@ -67,7 +67,7 @@ export const Navbar: React.FC = () => {
             ))}
 
             {/* Design Selector */}
-            <div className="relative">
+            {/* <div className="relative">
               <button
                 onClick={toggleDesignDropdown}
                 className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-brand-600 transition-colors"
@@ -95,7 +95,7 @@ export const Navbar: React.FC = () => {
                   ))}
                 </div>
               )}
-            </div>
+            </div> */}
           </div>
 
           {/* Mobile menu button */}

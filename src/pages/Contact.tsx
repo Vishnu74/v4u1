@@ -94,7 +94,7 @@ const Contact: React.FC = () => {
           message: '',
         });
       } else {
-        throw new Error(data.message || 'Submission failed');
+        throw new Error(data.error || data.message || 'Submission failed');
       }
     } catch (error) {
       console.error('Form submission error:', error);

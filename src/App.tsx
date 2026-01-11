@@ -5,6 +5,7 @@ import { AdminProvider } from './contexts/AdminContext';
 import { DesignRenderer } from './components/DesignRenderer';
 import { AdminModal } from './components/AdminModal';
 import { ScrollToTop } from './components/ScrollToTop';
+import { ScrollToTopHandler } from './components/ScrollToTopHandler';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -18,6 +19,7 @@ function App() {
       <DesignProvider>
         <AdminProvider>
           <Router>
+            <ScrollToTopHandler />
             <div className="min-h-screen">
               <DesignRenderer>
                 <Routes>
