@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { SITE_INFO, SERVICES } from '../../data/data';
-import { Phone, Mail, MapPin, Linkedin } from 'lucide-react';
+import { Phone, Mail, MapPin, Linkedin, Instagram } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -47,7 +47,13 @@ export const Footer: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <Linkedin className="h-5 w-5 text-brand-400" />
                 <a href={SITE_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                  V4U Steel Detailing Services
+                  V4U Steel Detailing
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Instagram className="h-5 w-5 text-brand-400" />
+                <a href={SITE_INFO.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                  V4U Steel Detailing
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -66,6 +72,7 @@ export const Footer: React.FC = () => {
                 { name: 'About Us', href: '/about' },
                 { name: 'Services', href: '/services' },
                 { name: 'Projects', href: '/projects' },
+                { name: 'Careers', href: '/careers' },
                 { name: 'Contact', href: '/contact' },
               ].map((link) => (
                 <li key={link.name}>
@@ -113,16 +120,26 @@ export const Footer: React.FC = () => {
               © {currentYear} {SITE_INFO.name}. All rights reserved.
             </div>
 
-            <div className="flex space-x-4">
-              <a href={SITE_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin className="h-5 w-5" />
-              </a>
-              {/* <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter className="h-5 w-5" />
-              </a> */}
-              {/* <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook className="h-5 w-5" />
-              </a> */}
+            <div className="flex items-center gap-4">
+              <span className="text-gray-400 text-sm font-medium uppercase tracking-wider">Follow Us On</span>
+              <div className="flex gap-3">
+                <a
+                  href={SITE_INFO.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-[#0077b5] hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-[#0077b5]/30 group"
+                >
+                  <Linkedin className="h-5 w-5 transition-transform group-hover:scale-110" />
+                </a>
+                <a
+                  href={SITE_INFO.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#bc1888] hover:to-[#cc2366] hover:text-white transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-pink-500/30 group"
+                >
+                  <Instagram className="h-5 w-5 transition-transform group-hover:scale-110" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

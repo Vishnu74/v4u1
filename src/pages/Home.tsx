@@ -89,7 +89,7 @@ const Home: React.FC = () => {
 
               <a href={SITE_INFO.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 hover:text-white transition-colors">
                 <Linkedin className="h-5 w-5" />
-                <span>V4U Steel Detailing Services</span>
+                <span>V4U Steel Detailing </span>
               </a>
 
             </div>

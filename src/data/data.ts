@@ -41,6 +41,7 @@ export const SITE_INFO = {
   name: 'V4U STEEL DETAILING',
   phone: '+91 8098315403',
   linkedin: 'https://www.linkedin.com/company/v4u-steel-detailers',
+  instagram: 'https://www.instagram.com/v4u_steel_detailing?igsh=NTF5aHdkYm4wdXlm',
   email: 'info@v4usteeldetailing.com',
   address: 'Rasipuram, Tamilnadu, India',
   tagline: 'Where Precision Meets Passion',

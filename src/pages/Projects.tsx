@@ -34,6 +34,10 @@ const Projects: React.FC = () => {
             <p className="text-xl md:text-2xl text-gray-500 font-light leading-relaxed">
               A curated portfolio of precision-engineered steel detailing projects, defining skylines and structures across the globe.
             </p>
+            <br />
+            <p className="text-lg text-gray-600 leading-relaxed">
+              {filteredProjects[0].details}
+            </p>
           </motion.div>
 
           {/* Filter Categories */}
@@ -80,9 +84,9 @@ const Projects: React.FC = () => {
                   {project.title}
                 </h2>
                 {/* <div className="w-20 h-1 bg-brand-200 mx-auto mb-8" /> */}
-                <p className="text-lg text-gray-600 leading-relaxed">
+                {/* <p className="text-lg text-gray-600 leading-relaxed">
                   {project.details}
-                </p>
+                </p> */}
               </div>
 
               {/* Image Gallery - Full Display of All Snaps */}
