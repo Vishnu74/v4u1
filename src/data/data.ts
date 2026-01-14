@@ -87,11 +87,11 @@ export const FOUNDERS_MESSAGE = {
 
   When you partner with V4U, you're not just getting a service provider — you're gaining a teammate who understands the critical role that precision plays in your success. We take pride in being the reliable partner who delivers on time, communicates clearly, and stands behind every drawing we produce.
 
-  Thank you for considering V4U Steel Detailings. We look forward to building something exceptional together.`,
+  Thank you for considering V4U Steel Detailing. We look forward to building something exceptional together.`,
 
   signature: 'Muralikrishnan S',
   title: 'Founder',
-  company: 'V4U Steel Detailings',
+  company: 'V4U Steel Detailing',
 };
 
 export const HOW_WE_WORK = [

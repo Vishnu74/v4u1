@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SEOHead } from '../components/SEOHead';
 import { ABOUT, FOUNDERS_MESSAGE, HOW_WE_WORK, SEO_DATA } from '../data/data';
 import { CheckCircle, ClipboardList, PenTool } from 'lucide-react';
+import { ImageLightbox } from '../components/shared/ImageLightbox';
 
 const About: React.FC = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
   return (
     <>
       <SEOHead
@@ -81,7 +84,8 @@ const About: React.FC = () => {
               <img
                 src="/assets/newlogo/about.png"
                 alt="V4U Team"
-                className="rounded-lg shadow-2xl"
+                className="rounded-lg shadow-2xl cursor-pointer hover:opacity-95 transition-opacity duration-300"
+                onClick={() => setLightboxOpen(true)}
               />
               {/* <div className="absolute -bottom-6 -left-6 bg-brand-600 text-white p-6 rounded-lg shadow-xl">
                 <div className="text-3xl font-bold">15+</div>
@@ -251,53 +255,12 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      {/* Team Structure */}
-      {/* <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-8">Our Team</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Meet the dedicated professionals behind V4U Steel Detailing Services
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {TEAM_STRUCTURE.map((member, index) => (
-              <motion.div
-                key={member.position}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 text-center"
-              >
-                <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden bg-gray-200">
-                  {member.image ? (
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <User className="h-12 w-12 text-gray-400" />
-                    </div>
-                  )}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{member.name}</h3>
-                <div className="text-brand-600 font-medium mb-4">{member.position}</div>
-                <p className="text-gray-600 leading-relaxed">{member.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
+      <ImageLightbox
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        imageSrc="/assets/newlogo/about.png"
+        altText="V4U Team"
+      />
     </>
   );
 };
