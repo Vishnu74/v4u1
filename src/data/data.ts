@@ -45,20 +45,20 @@ export const SITE_INFO = {
   email: 'info@v4usteeldetailing.com',
   address: 'Rasipuram, Tamilnadu, India',
   tagline: 'Where Precision Meets Passion',
-  shortWelcome: `Hi There! Welcome to V4U Steel Detailing - We are a dedicated team of experienced steel detailers committed to delivering high-quality structural and miscellaneous steel detailing services. With a strong foundation in AISC, BS and EURO CODE standards and hands-on expertise in Tekla Structures, we help fabricators, engineers, and general contractors bring their visions to life with accuracy and efficiency. Whether you're building bridges, commercial spaces, or custom stair systems – we're here to detail your success.`,
+  shortWelcome: `Hi There! Welcome to V4U Steel Detailing - We are a dedicated team of experienced steel detailers committed to delivering high-quality structural and miscellaneous steel detailing services. With a strong foundation in AISC, BS and EURO CODE standards we help fabricators, engineers, and general contractors bring their visions to life with accuracy and efficiency. Whether you're building bridges, commercial spaces, or custom stair systems – we're here to detail your success.`,
 };
 
 export const HERO_CONTENT = {
   title: 'V4U STEEL DETAILING',
   subtitle: 'Where Precision Meets Passion',
-  description: 'Expert steel detailing services with AISC, CISC, ASI, BS & EURO CODE compliance using Tekla Structures.',
+  description: 'Expert steel detailing services with AISC, CISC, ASI, BS & EURO CODE compliance.',
   ctaText: 'Start Your Project',
   ctaSecondary: 'View Portfolio',
 };
 
 export const ABOUT = {
   heading: 'About Us',
-  content: `V4U Detailing Services is a quality-driven steel detailing firm specializing in both structural and miscellaneous steel detailing using Tekla Structures. Backed by a team of experienced professionals, we deliver fabrication-ready drawings with accuracy, efficiency, and clarity. Our team is well-versed in international detailing standards, including: AISC (American Institute of Steel Construction), CISC (Canadian Institute of Steel Construction), ASI (Australian Steel Institute).`,
+  content: `V4U Detailing Services is a quality-driven steel detailing firm specializing in both structural and miscellaneous steel detailing. Backed by a team of experienced professionals, we deliver fabrication-ready drawings with accuracy, efficiency, and clarity. Our team is well-versed in international detailing standards, including: AISC (American Institute of Steel Construction), CISC (Canadian Institute of Steel Construction), ASI (Australian Steel Institute).`,
 
   whyChooseUs: [
     {
@@ -104,7 +104,7 @@ export const HOW_WE_WORK = [
   {
     step: 2,
     title: 'Modeling & Drawing Production',
-    description: 'Using Tekla Structures, we model the entire structure with precise connections, generate fabrication drawings, and create comprehensive material lists.',
+    description: 'We model the entire structure with precise connections, generate fabrication drawings, and create comprehensive material lists.',
     icon: 'PenTool',
   },
   {
@@ -380,7 +380,7 @@ export const TEAM_STRUCTURE = [
   {
     name: 'Modeling Specialists',
     position: '3 Tekla Modelers',
-    description: '2 senior and 1 junior modeler expert in Tekla Structures and 3D steel modeling.',
+    description: '2 senior and 1 junior modeler expert.',
     image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&h=400&fit=crop&crop=face',
   },
   {
@@ -438,13 +438,13 @@ export const CONTACT_INFO = {
 
 export const SEO_DATA = {
   defaultTitle: 'V4U Steel Detailing Services 2025 - Expert Steel Detailing',
-  defaultDescription: 'Professional steel detailing services with AISC, CISC & ASI compliance. Expert Tekla Structures modeling for structural and miscellaneous steel projects.',
+  defaultDescription: 'Professional steel detailing services with AISC, CISC & ASI compliance.',
   defaultImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&h=630&fit=crop',
 
   pages: {
     home: {
       title: 'V4U Steel Detailing Services - Where Precision Meets Passion',
-      description: 'Expert steel detailing services with AISC, CISC, ASI, BS & EURO CODE compliance using Tekla Structures. Structural & miscellaneous steel detailing for fabricators and contractors.',
+      description: 'Expert steel detailing services with AISC, CISC, ASI, BS & EURO CODE compliance. Structural & miscellaneous steel detailing for fabricators and contractors.',
     },
     about: {
       title: 'About V4U Steel Detailing - Expert Team & Company Story',
@@ -452,7 +452,7 @@ export const SEO_DATA = {
     },
     services: {
       title: 'Steel Detailing Services - AISC, CISC, ASI, BS & EURO CODE Compliance',
-      description: 'Comprehensive steel detailing services including structural steel, metalwork, connections, material takeoff, and shop drawings using Tekla Structures.',
+      description: 'Comprehensive steel detailing services including structural steel, metalwork, connections, material takeoff, and shop drawings.',
     },
     projects: {
       title: 'Steel Detailing Projects Portfolio - V4U Sample Work',
@@ -464,7 +464,7 @@ export const SEO_DATA = {
     },
     careers: {
       title: 'Careers at V4U - Join Our Steel Detailing Team',
-      description: 'Explore career opportunities at V4U Steel Detailing. Join our team of experts in Tekla Structures and structural steel detailing.',
+      description: 'Explore career opportunities at V4U Steel Detailing. Join our team of experts in structural steel detailing.',
     },
   },
 };
@@ -478,7 +478,7 @@ export const CAREERS_DATA = {
   benefits: [
     {
       title: 'Professional Growth',
-      description: 'Continuous learning opportunities and training in latest Tekla Structures features and international standards.',
+      description: 'Continuous learning opportunities and training in latest international standards.',
       icon: 'TrendingUp',
     },
     {
@@ -506,7 +506,7 @@ export const CAREERS_DATA = {
       experience: '5+ years',
       description: 'We are looking for an experienced Tekla Modeler to lead complex structural steel projects.',
       requirements: [
-        'Proficiency in Tekla Structures (Steel)',
+        'Proficiency in (Steel)',
         'Experience with AISC/CISC standards',
         'Ability to handle projects independently',
         'Strong problem-solving skills',
@@ -520,7 +520,7 @@ export const CAREERS_DATA = {
       experience: '1-3 years',
       description: 'Join our team as a Junior Detailer and grow your skills in a professional environment.',
       requirements: [
-        'Basic knowledge of Tekla Structures',
+        'Basic knowledge of (Steel)',
         'Understanding of engineering drawings',
         'Willingness to learn and adapt',
         'Diploma/Degree in Civil/Mechanical Engineering',

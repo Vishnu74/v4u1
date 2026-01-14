@@ -1,11 +1,56 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { SEOHead } from '../components/SEOHead';
 import { CAREERS_DATA, SEO_DATA, SITE_INFO } from '../data/data';
-import { Briefcase, MapPin, Clock, ArrowRight, TrendingUp, Globe, Monitor, Heart, CheckCircle } from 'lucide-react';
+import { Briefcase, MapPin, Clock, ArrowRight, TrendingUp, Globe, Monitor, Heart, CheckCircle, Construction } from 'lucide-react';
 
 
 const Careers: React.FC = () => {
+    return (
+        <>
+            <SEOHead
+                title={SEO_DATA.pages.careers.title}
+                description={SEO_DATA.pages.careers.description}
+            />
+
+            <div className="min-h-[85vh] flex flex-col items-center justify-center bg-gray-50 px-4 text-center">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                    className="bg-white p-12 rounded-2xl shadow-xl max-w-2xl w-full border border-gray-100"
+                >
+                    <div className="bg-brand-50 w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-8 border border-brand-100">
+                        <Construction className="text-brand-600 w-12 h-12" />
+                    </div>
+
+                    <h1 className="text-4xl font-bold text-gray-900 mb-4">
+                        Career Opportunities
+                    </h1>
+
+                    <h2 className="text-2xl font-semibold text-brand-600 mb-6">
+                        Coming Soon
+                    </h2>
+
+                    <p className="text-lg text-gray-600 mb-10 leading-relaxed">
+                        We are currently updating our career portal to bring you better opportunities.
+                        Please check back soon to explore how you can be a part of our team.
+                    </p>
+
+                    <Link
+                        to="/"
+                        className="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-lg text-white bg-brand-600 hover:bg-brand-700 transition-all duration-200 transform hover:scale-105 shadow-md hover:shadow-lg"
+                    >
+                        Back to Home <ArrowRight className="ml-2 w-5 h-5" />
+                    </Link>
+                </motion.div>
+            </div>
+        </>
+    );
+};
+
+export const CareersOld: React.FC = () => {
     return (
         <>
             <SEOHead

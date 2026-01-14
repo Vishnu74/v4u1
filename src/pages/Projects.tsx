@@ -3,9 +3,19 @@ import { motion } from 'framer-motion';
 import { SEOHead } from '../components/SEOHead';
 import { PROJECTS, SEO_DATA } from '../data/data';
 import { ProgressiveImage } from '../components/shared/ProgressiveImage';
+import { ImageLightbox } from '../components/shared/ImageLightbox';
 
 const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImageAlt, setSelectedImageAlt] = useState('');
+
+  const handleImageClick = (src: string, alt: string) => {
+    setSelectedImage(src);
+    setSelectedImageAlt(alt);
+    setLightboxOpen(true);
+  };
 
   const categories = ['All', ...Array.from(new Set(PROJECTS.map(p => p.industry)))];
   const filteredProjects = selectedCategory === 'All'
@@ -103,7 +113,8 @@ const Projects: React.FC = () => {
                     <ProgressiveImage
                       src={image}
                       alt={`${project.title} view ${imgIndex + 1}`}
-                      className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-700 ease-in-out"
+                      className="w-full h-auto object-contain hover:scale-[1.02] transition-transform duration-700 ease-in-out cursor-pointer"
+                      onClick={() => handleImageClick(image, `${project.title} view ${imgIndex + 1}`)}
                     />
                   </div>
                 ))}
@@ -112,6 +123,12 @@ const Projects: React.FC = () => {
           ))}
         </div>
       </section>
+      <ImageLightbox
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        imageSrc={selectedImage}
+        altText={selectedImageAlt}
+      />
     </>
   );
 };
